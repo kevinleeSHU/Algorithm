@@ -12,6 +12,7 @@ import java.util.Scanner;
  */
 public class CircularArrayQueue {
 
+    // Test
     public static void main(String[] args) {
 
         CircularArrayQueue queue = new CircularArrayQueue(5);
@@ -121,5 +122,4 @@ public class CircularArrayQueue {
         }
         return arr[front];
     }
-
 }
