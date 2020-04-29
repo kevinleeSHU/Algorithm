@@ -6,7 +6,7 @@ import java.util.Arrays;
  * @author Liyuwen
  * @create 2020/4/28 16:31
  */
-public class SelectSort {
+public class SelectionSort {
 
     public static void main(String[] args) {
         // 测试
