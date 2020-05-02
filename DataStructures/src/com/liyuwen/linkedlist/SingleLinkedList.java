@@ -25,8 +25,8 @@ public class SingleLinkedList {
         list.listAll();
         System.out.println();
 
-        list.remove(4);
-        list.remove(3);
+        list.remove(5);
+        list.remove(1);
         list.listAll();
 
     }
@@ -69,26 +69,31 @@ public class SingleLinkedList {
         if (isEmpty()) {
             throw new RuntimeException("链表为空，没有数据");
         }
-        if (index < 0 || index >= N) {
+        if (index < 1 || index > N) {
             throw new RuntimeException("索引范围有误");
         }
 
-        if (index == 0) {
-            return first.value;
+        // 删除第一个节点
+        if (index == 1) {
+            int result = first.value;
+            first = first.next;
+            N--;
+            return result;
+
+
+        } else {                // 删除其他节点
+            Node temp = first;
+            for (int i = 1; i < index - 1; i++) {
+                temp = temp.next;
+            }
+
+            Node temp1 = temp.next;
+            temp.next = temp1.next;
+
+            N--;
+
+            return temp1.value;
         }
-
-        Node temp = first;
-        for (int i = 0; i < index - 1; i++) {
-            temp = temp.next;
-        }
-
-        Node temp1 =  temp.next;
-        temp.next = temp1.next;
-
-        N--;
-
-        return temp1.value;
-
     }
 
     public void update(int index, int value) {

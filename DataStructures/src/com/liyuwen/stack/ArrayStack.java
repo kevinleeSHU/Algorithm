@@ -5,4 +5,9 @@ package com.liyuwen.stack;
  * @create 2020/4/29 16:11
  */
 public class ArrayStack {
+
+
+
+
+
 }
