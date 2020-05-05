@@ -51,7 +51,7 @@ public class SingleLinkedList {
         return N;
     }
 
-    // 没有头节点的头插法
+    // 没有头结点的头插法
     public void add(Node newNode) {
         if (first == null) {
             first = newNode;
@@ -64,7 +64,7 @@ public class SingleLinkedList {
         }
     }
 
-    // 删除任意节点，并返回值
+    // 删除任意结点，并返回值
     public int remove(int index) {
         if (isEmpty()) {
             throw new RuntimeException("链表为空，没有数据");
@@ -73,7 +73,7 @@ public class SingleLinkedList {
             throw new RuntimeException("索引范围有误");
         }
 
-        // 删除第一个节点
+        // 删除第一个结点
         if (index == 1) {
             int result = first.value;
             first = first.next;
@@ -81,7 +81,7 @@ public class SingleLinkedList {
             return result;
 
 
-        } else {                // 删除其他节点
+        } else {                // 删除其他结点
             Node temp = first;
             for (int i = 1; i < index - 1; i++) {
                 temp = temp.next;
@@ -109,6 +109,7 @@ public class SingleLinkedList {
         for (int i = 0; i < N; i++) {
             System.out.print(temp.value + " ");
             temp = temp.next;
+            
         }
     }
 
