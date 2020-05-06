@@ -3,6 +3,16 @@ package com.liyuwen.sort1;
 import java.util.Arrays;
 
 /**
+ * 选择排序：
+ *
+ * 时间复杂度：O(n^2)  时间复杂度与初始序列无关
+ *
+ * 空间复杂度：O(1)
+ *
+ * 是否稳定：否
+ *
+ * 适用范围：顺序存储
+ *
  * @author Liyuwen
  * @create 2020/4/28 16:31
  */
