@@ -1,4 +1,4 @@
-package com.liyuwen.sort1;
+package com.liyuwen.sort;
 
 import java.util.Arrays;
 

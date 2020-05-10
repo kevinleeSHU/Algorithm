@@ -1,6 +1,6 @@
-package com.liyuwen.sort1;
+package com.liyuwen.sort;
 
-import java.util.Arrays;
+import com.liyuwen.utils.GenerateRandom;
 
 /**
  * 选择排序：从第二个元素开始与前一个元素比较，比前一个小则交换，得到两个元素有序；再看第三个元素，依次与前两个元素比较
@@ -20,13 +20,17 @@ import java.util.Arrays;
 public class InsertionSort {
 
     public static void main(String[] args) {
-        int[] arr1 = new int[] {4, 6, 0, 3, 9, 2, 1};
-        int[] arr2 = new int[] {4, 6, 0, 3, 9, 2, 1};
-        sort1(arr1);
-        System.out.println(Arrays.toString(arr1));
+        int[] arr = GenerateRandom.getIntArrayFromTxt("D:\\学习\\Java\\Code\\Algorithms\\Sort\\data.txt");
 
-        sort2(arr2);
-        System.out.println(Arrays.toString(arr2));
+        long start = System.currentTimeMillis();
+
+        sort2(arr);
+
+        long end = System.currentTimeMillis();
+
+        System.out.println("插入排序所用时间为: " + (end - start) + "ms");
+
+        GenerateRandom.saveResultToText("D:\\学习\\Java\\Code\\Algorithms\\Sort\\result.txt", arr);
     }
 
     public static void sort1(int[] arr) {
