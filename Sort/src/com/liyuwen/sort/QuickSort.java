@@ -27,7 +27,7 @@ public class QuickSort {
 
     public static void main(String[] args) {
 
-        GenerateRandom.generate("D:\\学习\\Java\\Code\\Algorithms\\Sort\\data.txt", 100000, 10000);
+        GenerateRandom.generate("D:\\学习\\Java\\Code\\Algorithms\\Sort\\data.txt", 100000, -10000, 10000);
 
         int[] arr = GenerateRandom.getIntArrayFromTxt("D:\\学习\\Java\\Code\\Algorithms\\Sort\\data.txt");
 
@@ -39,7 +39,7 @@ public class QuickSort {
 
         System.out.println("快速排序所用时间为: " + (end - start) + "ms");
 
-        GenerateRandom.saveResultToText("D:\\学习\\Java\\Code\\Algorithms\\Sort\\result.txt", arr);
+        GenerateRandom.saveResultToTxt("D:\\学习\\Java\\Code\\Algorithms\\Sort\\result.txt", arr);
     }
 
     public static void sort(int[] arr, int left, int right) {
@@ -71,5 +71,4 @@ public class QuickSort {
         arr[i] = arr[j];
         arr[j] = temp;
     }
-
 }

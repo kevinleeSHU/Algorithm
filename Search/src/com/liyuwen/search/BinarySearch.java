@@ -1,9 +1,9 @@
-package com.liyuwen.exer;
+package com.liyuwen.search;
 
 import java.util.Arrays;
 
 /**
- * ClassName: com.liyuwen.exer.BinarySearch <br/>
+ * ClassName: com.liyuwen.search.BinarySearch <br/>
  * Description:  <br/>
  * date: 2020/2/26 13:27<br/>
  *

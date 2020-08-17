@@ -1,5 +1,7 @@
 package com.liyuwen.sort;
 
+import com.liyuwen.utils.GenerateRandom;
+
 import java.util.Arrays;
 
 /**
@@ -20,10 +22,15 @@ import java.util.Arrays;
 public class BinaryInsertionSort {
 
     public static void main(String[] args) {
-        int[] arr1 = new int[] {4, 6, 0, 3, 9, 2, 1, 19, -3, 13, 34};
-        sort(arr1);
+        int[] arr = GenerateRandom.getIntArrayFromTxt("D:\\学习\\Java\\Code\\Algorithms\\Sort\\data.txt");
 
-        System.out.println(Arrays.toString(arr1));
+        long start = System.currentTimeMillis();
+
+        sort(arr);
+
+        long end = System.currentTimeMillis();
+
+        System.out.println("折半插入排序所用时间为: " + (end - start) + "ms");
     }
 
     public static void sort(int[] arr) {

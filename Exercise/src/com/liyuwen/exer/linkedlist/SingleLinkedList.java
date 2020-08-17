@@ -1,4 +1,4 @@
-package com.liyuwen.linkedlist;
+package com.liyuwen.exer.linkedlist;
 
 import org.junit.Test;
 
@@ -82,7 +82,6 @@ public class SingleLinkedList {
             temp.next = temp1.next;
 
             N--;
-
             return temp1.value;
         }
     }

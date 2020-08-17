@@ -1,9 +1,9 @@
-package com.liyuwen.exer;
+package com.liyuwen.exer.dp;
 
 import java.util.Scanner;
 
 /**
- * ClassName: com.liyuwen.exer.FactorialTest <br/>
+ * ClassName: com.liyuwen.exer.dp.FactorialTest <br/>
  * Description:  <br/>
  * date: 2020/2/26 13:51<br/>
  *

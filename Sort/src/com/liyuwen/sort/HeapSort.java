@@ -25,6 +25,12 @@ public class HeapSort {
         System.out.println(Arrays.toString(arr1));
     }
 
+    /**
+     *
+     * @param arr
+     * @param currentRootNode
+     * @param len
+     */
     private static void heapify(int[] arr, int currentRootNode, int len) {
         if (currentRootNode < len) {
             // 左子树和右子树位置
@@ -34,16 +40,13 @@ public class HeapSort {
             int max = currentRootNode;  // 最大元素的位置，先初始化为根结点位置
 
             // 找到根节点和左右孩子中最大元素的下标
-            if (left < len) {
-                if (arr[max] < arr[left]) {
+            if (left < len && arr[left] < arr[max]) {
                     max = left;
-                }
             }
-            if (right < len) {
-                if (arr[max] < arr[right]) {
+            if (right < len && arr[max] < arr[right]) {
                     max = right;
-                }
             }
+
             // 最大值不是根结点就交换，使根结点值最大
             if (max != currentRootNode) {
                 swap(arr, max, currentRootNode);
@@ -60,8 +63,8 @@ public class HeapSort {
     public static void sort(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             maxHeapify(arr, arr.length - i);    // 每次建堆最大元素都在完全二叉树根结点，也是数组下标为 0 的位置
-            swap(arr, 0, arr.length-1 - i);     // 将最大元素与数组最后一个元素交换
-                                                        // 然后继续循环对除了交换后的最后一个位置（最大元素）建堆
+            swap(arr, 0, arr.length-1 - i);    // 将最大元素与数组最后一个元素交换
+                                                    // 然后继续循环对除了交换后的最后一个位置（最大元素）建堆
         }
     }
 
@@ -70,5 +73,4 @@ public class HeapSort {
         arr[i] = arr[j];
         arr[j] = temp;
     }
-
 }

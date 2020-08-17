@@ -1,4 +1,6 @@
-package com.liyuwen.linkedlist;
+package com.liyuwen.exer.linkedlist;
+
+import org.junit.Test;
 
 /**
  * @author Liyuwen
@@ -37,6 +39,14 @@ public class SingleLinkedListWithFirstNode {
         }
     }
 
+    public Node getNode() {
+        return new Node();
+    }
+
+    public int size() {
+        return N;
+    }
+
     // 尾插法
     public void addNode(Node node) {
         if (head == null) {
@@ -54,8 +64,8 @@ public class SingleLinkedListWithFirstNode {
         }
     }
 
-    public Node getNode() {
-        return new Node();
+    public void addNodeAt(int index) {
+
     }
 
     public boolean isEmpty() {
@@ -119,9 +129,5 @@ public class SingleLinkedListWithFirstNode {
             System.out.print(temp.value + " ");
             temp = temp.next;
         }
-    }
-
-    public int size() {
-        return N;
     }
 }

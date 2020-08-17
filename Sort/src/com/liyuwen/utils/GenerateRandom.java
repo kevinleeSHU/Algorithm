@@ -3,7 +3,6 @@ package com.liyuwen.utils;
 import org.junit.Test;
 
 import java.io.*;
-import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -18,10 +17,10 @@ public class GenerateRandom {
      * 在指定文件中生成一定数量的随机数
      * @param pathname 文件地址
      * @param n 随机数数量
-     * @param bound 随机数的最大值
+     * @param min 随机数的最小值
+     * @param max 随机数最大值
      */
-    public static void generate(String pathname, int n, int bound) {
-
+    public static void generate(String pathname, int n, int min, int max) {
         FileWriter fw = null;
         BufferedWriter bw = null;
         try {
@@ -37,7 +36,7 @@ public class GenerateRandom {
 
             for (int i = 1; i < n + 1; i++) {
 
-                int ranInt = random.nextInt(bound);
+                int ranInt = random.nextInt(max - min + 1) + min;
 
                 bw.write(ranInt + " ");
                 bw.flush();
@@ -45,7 +44,6 @@ public class GenerateRandom {
                 if (i % 30 == 0) {
                     bw.newLine();
                 }
-
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -65,7 +63,6 @@ public class GenerateRandom {
                 }
             }
         }
-
     }
 
     /**
@@ -74,7 +71,6 @@ public class GenerateRandom {
      * @return
      */
     public static int[] getIntArrayFromTxt(String pathname) {
-
         FileReader fr = null;
         BufferedReader br = null;
         int[] arr = new int[0];
@@ -85,7 +81,6 @@ public class GenerateRandom {
             String line = null;
 
             String s = "";
-
 
             while ((line = br.readLine()) != null) {
                 s = s + line;
@@ -116,9 +111,7 @@ public class GenerateRandom {
                 }
             }
         }
-
         return arr;
-
     }
 
     /**
@@ -126,8 +119,7 @@ public class GenerateRandom {
      * @param pathname 文件地址
      * @param arr 要保存的数组
      */
-    public static void saveResultToText(String pathname, int[] arr) {
-
+    public static void saveResultToTxt(String pathname, int[] arr) {
         FileWriter fw = null;
         BufferedWriter bw = null;
         try {
@@ -167,5 +159,4 @@ public class GenerateRandom {
             }
         }
     }
-
 }

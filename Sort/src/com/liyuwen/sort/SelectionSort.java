@@ -1,5 +1,7 @@
 package com.liyuwen.sort;
 
+import com.liyuwen.utils.GenerateRandom;
+
 import java.util.Arrays;
 
 /**
@@ -19,12 +21,15 @@ import java.util.Arrays;
 public class SelectionSort {
 
     public static void main(String[] args) {
-        // 测试
-        int[] arr = new int[] {3, 5, 6, 2, 20, 12, 9};
+        int[] arr = GenerateRandom.getIntArrayFromTxt("D:\\学习\\Java\\Code\\Algorithms\\Sort\\data.txt");
+
+        long start = System.currentTimeMillis();
 
         sort(arr);
 
-        System.out.println(Arrays.toString(arr));
+        long end = System.currentTimeMillis();
+
+        System.out.println("选择排序所用时间为: " + (end - start) + "ms");
 
     }
 

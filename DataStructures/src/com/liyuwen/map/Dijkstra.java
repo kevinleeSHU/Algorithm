@@ -1,4 +1,4 @@
-package com.liyuwen.map.shortestpath;
+package com.liyuwen.map;
 
 import java.util.HashMap;
 

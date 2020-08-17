@@ -7,7 +7,4 @@ package com.liyuwen.linkedlist;
  * @create 2020/4/29 16:03
  */
 public class StaticLinkedList {
-
-
-
 }

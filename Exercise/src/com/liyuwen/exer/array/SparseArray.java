@@ -1,4 +1,4 @@
-package com.liyuwen.exer;
+package com.liyuwen.exer.array;
 
 /**
  * 稀疏数组压缩

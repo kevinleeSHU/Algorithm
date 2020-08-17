@@ -1,4 +1,4 @@
-package com.liyuwen.stack;
+package com.liyuwen.exer.stack;
 
 /**
  * @author Liyuwen

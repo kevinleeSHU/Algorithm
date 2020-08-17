@@ -31,8 +31,6 @@ public class BubbleSort {
         long end = System.currentTimeMillis();
 
         System.out.println("冒泡排序所用时间为: " + (end - start) + "ms");
-
-        GenerateRandom.saveResultToText("D:\\学习\\Java\\Code\\Algorithms\\Sort\\result.txt", arr);
     }
 
     public static void sort1(int[] arr) {
